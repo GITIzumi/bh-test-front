@@ -1,0 +1,46 @@
+.canvas-container {
+    position: relative;
+
+    .legend {
+
+        .max,
+        .zero,
+        .min {
+            text-align: center;
+            width: 60px;
+        }
+
+        .max {
+            position: absolute;
+        }
+
+        .zero {
+            position: absolute;
+            top: 254px;
+            color: #ff000045;
+        }
+
+        .min {
+            top: 285px;
+            position: absolute;
+        }
+    }
+
+    canvas {
+        background-color: rgba(50, 9, 9, 0.076);
+        margin-left: 60px;
+    }
+
+    .intervals {
+        display: grid;
+        margin-left: 60px;
+
+
+        .interval {
+            position: relative;
+            left: -5px;
+            margin-top: 15px;
+            text-align: center;
+        }
+    }
+}

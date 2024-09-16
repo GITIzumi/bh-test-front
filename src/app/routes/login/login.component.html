@@ -1,0 +1,25 @@
+<form class="form" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <p *ngIf="isLoginMode" class="title">Login</p>
+    <p *ngIf="!isLoginMode" class="title">Signup</p>
+
+    <div class="input-container">
+        <label for="username">Username:</label>
+        <input id="username" type="text" formControlName="username">
+    </div>
+    <div class="input-container">
+        <label for="password">Password:</label>
+        <input required minlength="8" id="password" type="password" formControlName="password">
+    </div>
+
+    <p class="switch" (click)="switchMode()">
+        <ng-container *ngIf="isLoginMode">Signup</ng-container>
+        <ng-container *ngIf="!isLoginMode">Login</ng-container>
+    </p>
+
+    <input *ngIf="isLoginMode" class="submit" type="submit" value="Login" />
+    <input *ngIf="!isLoginMode" class="submit" type="submit" value="Signup" />
+
+    <ng-container *ngIf="$statusObservable | async as status">
+        {{ status }}
+    </ng-container>
+</form>

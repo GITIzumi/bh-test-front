@@ -1,0 +1,16 @@
+<div class="canvas-container">
+    <div class="legend">
+        <p class="max">150</p>
+        <p class="zero">0</p>
+        <p class="min">-10</p>
+
+    </div>
+    <canvas #myCanvas></canvas>
+    <div class="intervals" style="grid-template-columns: repeat({{ intervals.length  }}, 1fr)">
+
+        <div *ngFor="let interval of intervals" class="interval">
+            {{ interval }}
+        </div>
+
+    </div>
+</div>

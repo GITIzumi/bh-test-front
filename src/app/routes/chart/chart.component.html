@@ -1,0 +1,7 @@
+<ng-container *ngIf="$rawValues | async as rawValues">
+
+    <div class="chart-container">
+        <h1>Chart</h1>
+        <app-graph [rawValues]="rawValues"></app-graph>
+    </div>
+</ng-container>
